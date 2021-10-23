@@ -79,11 +79,17 @@ NAV
 }
 
 .nav_logo-weight {
+  position: relative;
   width: 4rem;
-  margin-right: auto;
+  /* margin-right: auto; */
   margin-top: 1rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
+
+  opacity: 0;
+  left:-100px;
+  animation: fadeIn 1s .5s forwards, 
+  slideIn .5s ease-out .5s forwards;
 }
 
 .nav_logo-text {
@@ -754,4 +760,16 @@ footer {
       border: 5px solid ivory;
       cursor: pointer;
       transform: scale(1.25);
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      0% {left: -100px}
+      85% {left: 3px}
+      100% {left: 0px}
     }
